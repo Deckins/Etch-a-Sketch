@@ -1,0 +1,10 @@
+.container{
+margin: 50px 50px;
+}
+
+
+.grid{
+display:inline-block;
+height:50px;
+width:50px;
+}
