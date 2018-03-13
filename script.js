@@ -1,19 +1,31 @@
-function createGrid(){
-	for(var rows=0; rows<16; rows++){
-		for(var clms=0; clms<16; clms++){
+function createGrid(x){
+	for(var rows=0; rows<x; rows++){
+		for(var clms=0; clms<x; clms++){
 			$('.container').append("<div class ='grid'></div>");
 		}
 	}
 }
-function reset(){
-		$('.grid').css("background-color","white");	
-
-
-}
-$(document).ready(function(){
-createGrid();
-$('.grid').mouseover(function(){
-	$(this).css("background-color","black");
+function boxHover()
+{
+	$('.grid').mouseover(function(){
+		$(this).addClass('style');
 	});
+}
+
+$(document).ready(function(){
+	createGrid(16);
+	$('.change').click(function(){
+		$('.grid').remove();
+		var input=prompt('Please Enter the Number of Columns and Rows');
+		createGrid(input);
+		boxHover();
+
+	})
+	$('.reset').click(function(){
+		$('grid').remove();
+		boxHover();
+
+	});
+	boxHover();
 });
-$('button').click(reset());
+
