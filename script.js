@@ -14,6 +14,7 @@ function boxHover()
 
 $(document).ready(function(){
 	createGrid(16);
+	boxHover();
 	$('.change').click(function(){
 		$('.grid').remove();
 		var input=prompt('Please Enter the Number of Columns and Rows');
@@ -22,10 +23,10 @@ $(document).ready(function(){
 
 	})
 	$('.reset').click(function(){
-		$('grid').remove();
+		$('.grid').remove();
+		createGrid(16);
 		boxHover();
 
 	});
-	boxHover();
 });
 
