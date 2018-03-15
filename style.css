@@ -1,14 +1,23 @@
 .container{
 margin: 50px 50px;
+max-height:1940px;
+max-width: 512px;
+margin: 0 auto;
+border:5px solid black ;
 }
 
 
 .grid{
 display:inline-block;
-height:50px;
-width:50px;
+height:30px;
+width:30px;
+border:1px solid black;
+}
+.reset{
+float:right;
+
 }
 .style{
-background-color:black;
+background-color:orange;
 
 }

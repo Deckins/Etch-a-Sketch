@@ -11,20 +11,21 @@ function boxHover()
 		$(this).addClass('style');
 	});
 }
+//Reset should clear out all the hovers of the original dimensions
 
+var input=prompt('Please Enter the Number of Columns and Rows');
 $(document).ready(function(){
 	createGrid(16);
 	boxHover();
 	$('.change').click(function(){
 		$('.grid').remove();
-		var input=prompt('Please Enter the Number of Columns and Rows');
 		createGrid(input);
 		boxHover();
 
 	})
 	$('.reset').click(function(){
 		$('.grid').remove();
-		createGrid(16);
+		createGrid(input);
 		boxHover();
 
 	});
