@@ -4,6 +4,7 @@ function createGrid(x){
 			$('.container').append("<div class ='grid'></div>");
 		}
 	}
+	return x;
 }
 function boxHover()
 {
@@ -11,20 +12,21 @@ function boxHover()
 		$(this).addClass('style');
 	});
 }
-//Reset should clear out all the hovers of the original dimensions
-
-var input=prompt('Please Enter the Number of Columns and Rows');
+//Global variables input is set to 16 so that reset will create a new grid with the same default size
+var input = 16;
 $(document).ready(function(){
-	createGrid(16);
+	createGrid(input);
 	boxHover();
 	$('.change').click(function(){
+		
+		input=prompt('Please Enter the Number of Columns and Rows');
 		$('.grid').remove();
-		createGrid(input);
+		createGrid(input); //input is changed once the chance button is clicked
 		boxHover();
 
 	})
 	$('.reset').click(function(){
-		$('.grid').remove();
+		$('.grid').removeClass();
 		createGrid(input);
 		boxHover();
 
