@@ -8,8 +8,11 @@ function createGrid(x){
 }
 function boxHover()
 {
+	var colors = ['orange','green','aqua','pink','coral','plum'];
 	$('.grid').mouseover(function(){
-		$(this).addClass('style');
+		//randomly picks a number between 1 and size of the array and returns the value
+		var index = colors[Math.floor(Math.random() * colors.length)];
+		$(this).addClass(index);
 	});
 }
 //Global variables input is set to 16 so that reset will create a new grid with the same default size
