@@ -4,15 +4,21 @@ function createGrid(x){
 			$('.container').append("<div class ='grid'></div>");
 		}
 	}
-	return x;
+	//Scales the height and width of the container depending on the dimensions.
+	$('.grid').height(500/x);
+	$('.grid').width(500/x);
 }
 function boxHover()
 {
-	var colors = ['orange','green','aqua','pink','coral','plum'];
+	//var colors = ['orange','green','aqua','pink','coral','plum'];
 	$('.grid').mouseover(function(){
 		//randomly picks a number between 1 and size of the array and returns the value
-		var index = colors[Math.floor(Math.random() * colors.length)];
-		$(this).addClass(index);
+		//var index = colors[Math.floor(Math.random() * colors.length)];
+		var r = Math.floor(Math.random() * 255);
+		var g = Math.floor(Math.random() * 255);
+		var b = Math.floor(Math.random() * 255);
+		var color = 'rgb('+r+','+g+','+b+')';
+		$(this).css("background-color",color);
 	});
 }
 //Global variables input is set to 16 so that reset will create a new grid with the same default size

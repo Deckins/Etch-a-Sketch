@@ -1,7 +1,8 @@
+
 .container{
 margin: 50px 50px;
-max-height:1940px;
-max-width: 512px;
+height:500px;
+width: 500px;
 margin: 0 auto;
 border:5px solid black ;
 }
@@ -9,9 +10,7 @@ border:5px solid black ;
 
 .grid{
 display:inline-block;
-height:30px;
-width:30px;
-border:1px solid black;
+outline:2px solid black;
 }
 .reset{
 float:right;
