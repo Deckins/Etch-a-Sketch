@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 	})
 	$('.reset').click(function(){
-		$('.grid').removeClass();
+		$('.grid').remove();
 		createGrid(input);
 		boxHover();
 
