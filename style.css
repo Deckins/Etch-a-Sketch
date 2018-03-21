@@ -1,10 +1,14 @@
+html{
+background-color: aqua;
 
+}
 .container{
 margin: 50px 50px;
 height:500px;
 width: 500px;
 margin: 0 auto;
 border:5px solid black ;
+background-color:white;
 }
 
 
@@ -15,21 +19,12 @@ outline:2px solid black;
 .reset{
 float:right;
 }
-.orange{
-background-color:orange;
-}
-.green{
-background-color:mediumseagreen;
-}
-.aqua{
-background-color:aqua;
-}
-.pink{
-background-color:hotpink;
-}
-.coral{
-background-color:lightcoral;
-}
-.plum{
-background-color:plum;
+button{
+border-radius: 10px;
+font-family:arial;
+background-color:yellow;
+box-shadow: 3px 5px 3px;
+margin: 0 auto;
+vertical-align:center;
+
 }
